@@ -35,6 +35,7 @@ private:
 	void Calculate_critical_path_parameters();
 	double Get_value_from_dystrybuanta_table();
 	void Write_results_to_file(string file_name);
+	double Tablica_dystrybuanty(double x);
 
 };
 

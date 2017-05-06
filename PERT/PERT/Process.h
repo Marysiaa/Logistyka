@@ -19,7 +19,7 @@ public:
 	double directive_time;
 	int process_id, *previous_processes_ids;
 	int amount_of_processes, amount_of_previous_proccesses;
-	double optimistic_time, probable_time, pesimistic_time, expected_time, wariancja ;
+	double optimistic_time, probable_time, pesimistic_time, expected_time, wariancja;
 
 	Process();
 	~Process();

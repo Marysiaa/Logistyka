@@ -1,27 +1,19 @@
-﻿//============================================================================
+//============================================================================
 // Name        : PERT.cpp
-// Author      : Maria
+// Author      : Maria, Wojciech
 // Description : Application to calculate probability of finishing process before directive time in C++
 //============================================================================
 
-#include <iostream>
-#include <string>
-#include "Probability_calculator.h"
+#include "PERT.h"
 
-using namespace std;
 
-int main()
-{
-	cout << "PERT" << endl;
+using namespace System;
+using namespace System::Windows::Forms;
 
-	string data_file = "dane.txt", result_file = "result.txt";
-
-	Probability_calculator calc;
-	double probability = calc.calculate_probability(data_file, result_file);
-
-	cout << "Probability of finishing process before directive time (" << calc.get_directive_time() << ") is = " << probability << "%" << endl;
-
-	system("pause");
+int main() {
+	Application::EnableVisualStyles;
+	Application::SetCompatibleTextRenderingDefault(false);
+	PERTGUI::PERT forma;
+	Application::Run(%forma);
 	return 0;
 }
-

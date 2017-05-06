@@ -29,7 +29,17 @@ Process * Data_getter::get_data()
 		exit(1);
 	}
 
-	data_file >> a_processes;
+	a_processes = 0;
+	string wiersz;
+	while (!data_file.eof())
+	{
+		getline(data_file, wiersz);
+		a_processes++;
+	}
+	a_processes -= 1;
+	cout << endl << a_processes << endl;
+	data_file.seekg(0);
+
 	processes = new Process[a_processes];
 
 	for (int i = 0; i < a_processes; i++)
